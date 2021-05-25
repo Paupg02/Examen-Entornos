@@ -3,25 +3,25 @@ package paquete1;
 /**
  * 
  * @author Paula Plaza Guirado
- * @version 1.0
+ * @version 1.1
  *
  */
 public class Enteros {
 
 	/**
-	 * Metodo que calcula el factorial de un número contando del número hasta 1
+	 * Metodo que calcula el factorial de un número contando hacia atras desde el número hasta 1
 	 * @param n Número a calcular el factorial
 	 * @return Factorial del número
 	 */
 	public static int r_factorial(int n) {
-		int resultado;
+		int res;
 
 		if (n == 0) {
-			resultado = 1;
+			res = 1;
 		} else {
-			resultado = n * r_factorial(n - 1);
+			res = n * r_factorial(n - 1);
 		}
-		return resultado;
+		return res;
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class Enteros {
 	 * @param n Número pasado
 	 * @return Cantidad de primos que hay desde 2 hasta el número
 	 */
-	public static int n_primos(int n) {
+	public static int numPrimos(int n) {
 		int resultado = 0;
 
 		for (int i = 2; i <= n; i++) {
@@ -159,7 +159,7 @@ public class Enteros {
 	public static int[] primosHasta(int n) {
 		int[] resultado;
 
-		resultado = new int[n_primos(n)];
+		resultado = new int[numPrimos(n)];
 		int cont = 0;
 		for (int i = 2; i <= n; i++) {
 			if (esPrimo(i)) {
